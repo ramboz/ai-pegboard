@@ -1,0 +1,74 @@
+{
+  "name": "ai-pegboard",
+  "description": "ramboz's AI-native development workbench — jig, servo, shaper and friends — installable in Claude Code, Codex, and GitHub Copilot CLI from one marketplace.",
+  "owner": {
+    "name": "ramboz",
+    "url": "https://github.com/ramboz"
+  },
+  "plugins": [
+    {
+      "name": "jig",
+      "description": "Spec-driven, review-enforced, hook-gated AI-native development workflow: scaffold a project, split specs into slices, implement with TDD, review independently, reconcile, land.",
+      "version": "2.16.2",
+      "category": "Engineering",
+      "keywords": [
+        "workflow",
+        "spec-driven",
+        "review",
+        "hooks",
+        "scaffold"
+      ],
+      "homepage": "https://github.com/ramboz/jig",
+      "repository": "https://github.com/ramboz/jig",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ramboz/jig.git",
+        "path": "hosts/claude",
+        "ref": "v2.16.2",
+        "sha": "bccb6be1cf0f3b62c471869b7d9208928fa323c0"
+      }
+    },
+    {
+      "name": "servo",
+      "description": "Closed-loop scaffolder for unattended agent operations: oracle scoring, headless agent loops, hooks, and worktree races — tailored to each project's signals.",
+      "version": "0.10.0",
+      "category": "Engineering",
+      "keywords": [
+        "evaluation-driven-development",
+        "quality-gates",
+        "agent-loop",
+        "scaffold"
+      ],
+      "homepage": "https://github.com/ramboz/servo",
+      "repository": "https://github.com/ramboz/servo",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ramboz/servo.git",
+        "path": "hosts/claude",
+        "ref": "v0.10.0",
+        "sha": "dabd5baf38a83a0e6a337ae02433afa259ab31e6"
+      }
+    },
+    {
+      "name": "shaper",
+      "description": "Release shaping before implementation starts: appetite, shaped bets, release cutlines, no-gos, and handoff guidance into specs.",
+      "version": "0.4.0",
+      "category": "Engineering",
+      "keywords": [
+        "release-shaping",
+        "scope",
+        "planning",
+        "specs"
+      ],
+      "homepage": "https://github.com/ramboz/shaper",
+      "repository": "https://github.com/ramboz/shaper",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ramboz/shaper.git",
+        "path": "hosts/claude",
+        "ref": "v0.4.0",
+        "sha": "ac436c004aa507a5c73f76d5d862246e1d406adf"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9" # floor shared with jig/servo/shaper
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
+
+      - name: Drift guard
+        # The three host descriptors and the README table are generated from
+        # catalog.json. A PR that edits the catalog without regenerating (or
+        # hand-edits a descriptor) fails here with the stale paths listed.
+        run: python3 scripts/build_marketplaces.py --check
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate the Claude Code descriptor with the official validator
+        # Claude Code ships the only first-party marketplace validator of the
+        # three hosts; --strict turns unknown fields and missing metadata into
+        # failures. Codex and Copilot are covered by scripts/smoke_hosts.py,
+        # which needs their CLIs and is run locally.
+        run: npx --yes --package @anthropic-ai/claude-code claude plugin validate --strict .

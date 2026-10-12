@@ -1,0 +1,53 @@
+{
+  "name": "ai-pegboard",
+  "interface": {
+    "displayName": "ai-pegboard"
+  },
+  "plugins": [
+    {
+      "name": "jig",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ramboz/jig.git",
+        "path": "./hosts/codex/plugins/jig",
+        "ref": "v2.16.2",
+        "sha": "bccb6be1cf0f3b62c471869b7d9208928fa323c0"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Engineering"
+    },
+    {
+      "name": "servo",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ramboz/servo.git",
+        "path": "./hosts/codex/plugins/servo",
+        "ref": "v0.10.0",
+        "sha": "dabd5baf38a83a0e6a337ae02433afa259ab31e6"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Engineering"
+    },
+    {
+      "name": "shaper",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ramboz/shaper.git",
+        "path": "./hosts/codex/plugins/shaper",
+        "ref": "v0.4.0",
+        "sha": "ac436c004aa507a5c73f76d5d862246e1d406adf"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Engineering"
+    }
+  ]
+}

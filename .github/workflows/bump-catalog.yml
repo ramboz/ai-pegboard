@@ -1,0 +1,45 @@
+name: bump-catalog
+
+# Re-pins every catalog plugin to its latest GitHub release and opens a PR when
+# anything moved. Needs "Allow GitHub Actions to create and approve pull
+# requests" enabled under Settings → Actions → General.
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+
+      - name: Resolve latest releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/bump_catalog.py
+
+      - name: Regenerate descriptors
+        run: python3 scripts/build_marketplaces.py
+
+      - name: Open or update the bump PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bot/bump-catalog
+          delete-branch: true
+          commit-message: "chore(catalog): pin plugins to their latest releases"
+          title: "chore(catalog): pin plugins to their latest releases"
+          body: |
+            Automated re-pin of `catalog.json` to each plugin's latest GitHub release,
+            with the three host descriptors and the README table regenerated.
+
+            Review the diff, then merge. Users pick the new pins up with their host's
+            `marketplace update` / `upgrade` followed by a plugin update.

@@ -1,0 +1,32 @@
+{
+  "name": "ai-pegboard",
+  "owner": {
+    "name": "ramboz"
+  },
+  "metadata": {
+    "description": "ramboz's AI-native development workbench — jig, servo, shaper and friends — installable in Claude Code, Codex, and GitHub Copilot CLI from one marketplace."
+  },
+  "plugins": [
+    {
+      "name": "jig",
+      "description": "Spec-driven, review-enforced, hook-gated AI-native development workflow: scaffold a project, split specs into slices, implement with TDD, review independently, reconcile, land.",
+      "version": "2.16.2",
+      "category": "Engineering",
+      "keywords": [
+        "workflow",
+        "spec-driven",
+        "review",
+        "hooks",
+        "scaffold"
+      ],
+      "homepage": "https://github.com/ramboz/jig",
+      "source": {
+        "source": "github",
+        "repo": "ramboz/jig",
+        "path": "hosts/copilot",
+        "ref": "v2.16.2",
+        "sha": "bccb6be1cf0f3b62c471869b7d9208928fa323c0"
+      }
+    }
+  ]
+}
