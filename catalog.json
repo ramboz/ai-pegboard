@@ -12,14 +12,26 @@
       "description": "Spec-driven, review-enforced, hook-gated AI-native development workflow: scaffold a project, split specs into slices, implement with TDD, review independently, reconcile, land.",
       "repo": "ramboz/jig",
       "category": "Engineering",
-      "keywords": ["workflow", "spec-driven", "review", "hooks", "scaffold"],
+      "keywords": [
+        "workflow",
+        "spec-driven",
+        "review",
+        "hooks",
+        "scaffold"
+      ],
       "version": "2.16.2",
       "ref": "v2.16.2",
       "sha": "bccb6be1cf0f3b62c471869b7d9208928fa323c0",
       "hosts": {
-        "claude": { "path": "hosts/claude" },
-        "codex": { "path": "hosts/codex/plugins/jig" },
-        "copilot": { "path": "hosts/copilot" }
+        "claude": {
+          "path": "hosts/claude"
+        },
+        "codex": {
+          "path": "hosts/codex/plugins/jig"
+        },
+        "copilot": {
+          "path": "hosts/copilot"
+        }
       }
     },
     {
@@ -27,13 +39,25 @@
       "description": "Closed-loop scaffolder for unattended agent operations: oracle scoring, headless agent loops, hooks, and worktree races — tailored to each project's signals.",
       "repo": "ramboz/servo",
       "category": "Engineering",
-      "keywords": ["evaluation-driven-development", "quality-gates", "agent-loop", "scaffold"],
-      "version": "0.10.0",
-      "ref": "v0.10.0",
-      "sha": "dabd5baf38a83a0e6a337ae02433afa259ab31e6",
+      "keywords": [
+        "evaluation-driven-development",
+        "quality-gates",
+        "agent-loop",
+        "scaffold"
+      ],
+      "version": "0.11.0",
+      "ref": "v0.11.0",
+      "sha": "067ef5092d3c3ebe7d55a4e27610d7fe1d688463",
       "hosts": {
-        "claude": { "path": "hosts/claude" },
-        "codex": { "path": "hosts/codex/plugins/servo" }
+        "claude": {
+          "path": "hosts/claude"
+        },
+        "codex": {
+          "path": "hosts/codex/plugins/servo"
+        },
+        "copilot": {
+          "path": "hosts/copilot"
+        }
       }
     },
     {
@@ -41,13 +65,25 @@
       "description": "Release shaping before implementation starts: appetite, shaped bets, release cutlines, no-gos, and handoff guidance into specs.",
       "repo": "ramboz/shaper",
       "category": "Engineering",
-      "keywords": ["release-shaping", "scope", "planning", "specs"],
-      "version": "0.4.0",
-      "ref": "v0.4.0",
-      "sha": "ac436c004aa507a5c73f76d5d862246e1d406adf",
+      "keywords": [
+        "release-shaping",
+        "scope",
+        "planning",
+        "specs"
+      ],
+      "version": "0.5.0",
+      "ref": "v0.5.0",
+      "sha": "bdaef21543c39dbffdf454c8eff56f4ec87b3355",
       "hosts": {
-        "claude": { "path": "hosts/claude" },
-        "codex": { "path": "hosts/codex/plugins/shaper" }
+        "claude": {
+          "path": "hosts/claude"
+        },
+        "codex": {
+          "path": "hosts/codex/plugins/shaper"
+        },
+        "copilot": {
+          "path": "hosts/copilot"
+        }
       }
     }
   ]

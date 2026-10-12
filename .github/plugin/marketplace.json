@@ -27,6 +27,46 @@
         "ref": "v2.16.2",
         "sha": "bccb6be1cf0f3b62c471869b7d9208928fa323c0"
       }
+    },
+    {
+      "name": "servo",
+      "description": "Closed-loop scaffolder for unattended agent operations: oracle scoring, headless agent loops, hooks, and worktree races — tailored to each project's signals.",
+      "version": "0.11.0",
+      "category": "Engineering",
+      "keywords": [
+        "evaluation-driven-development",
+        "quality-gates",
+        "agent-loop",
+        "scaffold"
+      ],
+      "homepage": "https://github.com/ramboz/servo",
+      "source": {
+        "source": "github",
+        "repo": "ramboz/servo",
+        "path": "hosts/copilot",
+        "ref": "v0.11.0",
+        "sha": "067ef5092d3c3ebe7d55a4e27610d7fe1d688463"
+      }
+    },
+    {
+      "name": "shaper",
+      "description": "Release shaping before implementation starts: appetite, shaped bets, release cutlines, no-gos, and handoff guidance into specs.",
+      "version": "0.5.0",
+      "category": "Engineering",
+      "keywords": [
+        "release-shaping",
+        "scope",
+        "planning",
+        "specs"
+      ],
+      "homepage": "https://github.com/ramboz/shaper",
+      "source": {
+        "source": "github",
+        "repo": "ramboz/shaper",
+        "path": "hosts/copilot",
+        "ref": "v0.5.0",
+        "sha": "bdaef21543c39dbffdf454c8eff56f4ec87b3355"
+      }
     }
   ]
 }

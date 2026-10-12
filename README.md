@@ -46,8 +46,8 @@ exactly what will install.
 | Plugin | What it does | Release | Claude Code | Codex | Copilot CLI |
 |---|---|---|:-:|:-:|:-:|
 | [jig](https://github.com/ramboz/jig) | Spec-driven, review-enforced, hook-gated AI-native development workflow: scaffold a project, split specs into slices, implement with TDD, review independently, reconcile, land. | `v2.16.2` | ✓ | ✓ | ✓ |
-| [servo](https://github.com/ramboz/servo) | Closed-loop scaffolder for unattended agent operations: oracle scoring, headless agent loops, hooks, and worktree races — tailored to each project's signals. | `v0.10.0` | ✓ | ✓ | — |
-| [shaper](https://github.com/ramboz/shaper) | Release shaping before implementation starts: appetite, shaped bets, release cutlines, no-gos, and handoff guidance into specs. | `v0.4.0` | ✓ | ✓ | — |
+| [servo](https://github.com/ramboz/servo) | Closed-loop scaffolder for unattended agent operations: oracle scoring, headless agent loops, hooks, and worktree races — tailored to each project's signals. | `v0.11.0` | ✓ | ✓ | ✓ |
+| [shaper](https://github.com/ramboz/shaper) | Release shaping before implementation starts: appetite, shaped bets, release cutlines, no-gos, and handoff guidance into specs. | `v0.5.0` | ✓ | ✓ | ✓ |
 <!-- plugins:end -->
 
 The table is generated from [`catalog.json`](catalog.json) — edit the catalog,

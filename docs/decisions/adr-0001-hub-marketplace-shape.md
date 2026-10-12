@@ -68,9 +68,8 @@ Option D. Supporting decisions:
   `bump-catalog` workflow re-pin via PR; `"pin": false` opts a plugin into
   tracking its default branch.
 - **Per-host presence is explicit.** A plugin appears in a host's descriptor
-  only when its catalog entry declares a package path for that host; servo and
-  shaper are therefore absent from the Copilot descriptor until they ship
-  `hosts/copilot/`.
+  only when its catalog entry declares a package path for that host. (At
+  acceptance servo and shaper had no `hosts/copilot/`; see Amendments.)
 - **Name.** The marketplace is `ai-pegboard`, repo and manifest alike: a
   pegboard is where a shop hangs its tools in view, and the `ai-` prefix says
   which shop. Collision check on 2026-10-12: `ai-pegboard` had no GitHub repo,
@@ -90,3 +89,11 @@ Option D. Supporting decisions:
   GitHub (`copilot plugin marketplace add ramboz/ai-pegboard`) is the supported
   path; `smoke_hosts.py --source` exists to prove it after the first push.
 - Claude Code validates `--strict`; the renderer emits only documented fields.
+
+## Amendments
+
+- **2026-10-12** — servo v0.11.0 and shaper v0.5.0 shipped committed
+  `hosts/copilot/` packages, so every catalog plugin now renders on all three
+  hosts. Adding a host is one `hosts.<host>.path` line on the catalog entry;
+  `bump_catalog.py` only re-pins hosts that are already declared, so a newly
+  shipped host package still needs that line added by hand.

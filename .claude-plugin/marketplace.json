@@ -31,7 +31,7 @@
     {
       "name": "servo",
       "description": "Closed-loop scaffolder for unattended agent operations: oracle scoring, headless agent loops, hooks, and worktree races — tailored to each project's signals.",
-      "version": "0.10.0",
+      "version": "0.11.0",
       "category": "Engineering",
       "keywords": [
         "evaluation-driven-development",
@@ -45,14 +45,14 @@
         "source": "git-subdir",
         "url": "https://github.com/ramboz/servo.git",
         "path": "hosts/claude",
-        "ref": "v0.10.0",
-        "sha": "dabd5baf38a83a0e6a337ae02433afa259ab31e6"
+        "ref": "v0.11.0",
+        "sha": "067ef5092d3c3ebe7d55a4e27610d7fe1d688463"
       }
     },
     {
       "name": "shaper",
       "description": "Release shaping before implementation starts: appetite, shaped bets, release cutlines, no-gos, and handoff guidance into specs.",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "category": "Engineering",
       "keywords": [
         "release-shaping",
@@ -66,8 +66,8 @@
         "source": "git-subdir",
         "url": "https://github.com/ramboz/shaper.git",
         "path": "hosts/claude",
-        "ref": "v0.4.0",
-        "sha": "ac436c004aa507a5c73f76d5d862246e1d406adf"
+        "ref": "v0.5.0",
+        "sha": "bdaef21543c39dbffdf454c8eff56f4ec87b3355"
       }
     }
   ]
