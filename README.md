@@ -9,10 +9,10 @@ Each tool owns a different part of the loop.
 | Tool | Role | What it does | Status |
 | --- | --- | --- | --- |
 | **[shaper](https://github.com/ramboz/shaper)** | **Shape** | Turn intent into bounded releases. | Available |
-| **[vellum](https://github.com/PinkException/vellum)** | **Design** | Carry visual intent into code with measurable fidelity. | Coming soon |
+| **vellum** | **Design** | Carry visual intent into code with measurable fidelity. | Coming soon |
 | **[jig](https://github.com/ramboz/jig)** | **Build** | Turn specs into reviewed software. | Available |
 | **[servo](https://github.com/ramboz/servo)** | **Prove** | Evaluate outcomes against intent and produce evidence. | Available |
-| **[gauge](https://github.com/ramboz/gauge)** | **Steer** | See progress, risk, blockers, and where attention is needed. | Available |
+| **gauge** | **Steer** | See progress, risk, blockers, and where attention is needed. | Coming soon |
 
 ```text
 SHAPE        DESIGN        BUILD         PROVE
