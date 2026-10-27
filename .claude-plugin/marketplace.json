@@ -9,7 +9,7 @@
     {
       "name": "jig",
       "description": "Spec-driven, review-enforced, hook-gated AI-native development workflow: scaffold a project, split specs into slices, implement with TDD, review independently, reconcile, land.",
-      "version": "2.16.2",
+      "version": "2.17.0",
       "category": "Engineering",
       "keywords": [
         "workflow",
@@ -24,14 +24,14 @@
         "source": "git-subdir",
         "url": "https://github.com/ramboz/jig.git",
         "path": "hosts/claude",
-        "ref": "v2.16.2",
-        "sha": "bccb6be1cf0f3b62c471869b7d9208928fa323c0"
+        "ref": "v2.17.0",
+        "sha": "35826fb000a3dcda57f8a4f1160db3c2440fd68f"
       }
     },
     {
       "name": "servo",
       "description": "Closed-loop scaffolder for unattended agent operations: oracle scoring, headless agent loops, hooks, and worktree races — tailored to each project's signals.",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "category": "Engineering",
       "keywords": [
         "evaluation-driven-development",
@@ -45,8 +45,8 @@
         "source": "git-subdir",
         "url": "https://github.com/ramboz/servo.git",
         "path": "hosts/claude",
-        "ref": "v0.11.0",
-        "sha": "067ef5092d3c3ebe7d55a4e27610d7fe1d688463"
+        "ref": "v0.12.0",
+        "sha": "cca43b03c25b3f685f48a07f312d6d8165115843"
       }
     },
     {
