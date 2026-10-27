@@ -10,8 +10,8 @@
         "source": "git-subdir",
         "url": "https://github.com/ramboz/jig.git",
         "path": "./hosts/codex/plugins/jig",
-        "ref": "v2.16.2",
-        "sha": "bccb6be1cf0f3b62c471869b7d9208928fa323c0"
+        "ref": "v2.17.0",
+        "sha": "35826fb000a3dcda57f8a4f1160db3c2440fd68f"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -25,8 +25,8 @@
         "source": "git-subdir",
         "url": "https://github.com/ramboz/servo.git",
         "path": "./hosts/codex/plugins/servo",
-        "ref": "v0.11.0",
-        "sha": "067ef5092d3c3ebe7d55a4e27610d7fe1d688463"
+        "ref": "v0.12.0",
+        "sha": "cca43b03c25b3f685f48a07f312d6d8165115843"
       },
       "policy": {
         "installation": "AVAILABLE",
