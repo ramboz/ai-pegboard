@@ -8,6 +8,24 @@
   },
   "plugins": [
     {
+      "name": "coaster",
+      "description": "A light-weight front door for new project ideas: capture a hunch, scout the field, read the evidence through six lenses, decide, name it and hand it off.",
+      "repo": "ramboz/coaster",
+      "category": "Engineering",
+      "keywords": [
+        "idea-triage",
+        "field-research",
+        "discovery",
+        "naming",
+        "handoff"
+      ],
+      "hosts": {
+        "claude": {
+          "path": "hosts/claude"
+        }
+      }
+    },
+    {
       "name": "jig",
       "description": "Spec-driven, review-enforced, hook-gated AI-native development workflow: scaffold a project, split specs into slices, implement with TDD, review independently, reconcile, land.",
       "repo": "ramboz/jig",

@@ -2,12 +2,13 @@
 
 **Tools for the AI-native software lifecycle.**
 
-AI Pegboard brings together a set of focused tools for the everyday work of building software with AI — shaping what to build, carrying design intent into code, implementing it rigorously, proving the result, and seeing where attention is needed.
+AI Pegboard brings together a set of focused tools for the everyday work of building software with AI — deciding whether an idea is worth building, shaping what to build, carrying design intent into code, implementing it rigorously, proving the result, and seeing where attention is needed.
 
 Each tool owns a different part of the loop.
 
 | Tool | Role | What it does | Status |
 | --- | --- | --- | --- |
+| **[coaster](https://github.com/ramboz/coaster)** | **Triage** | Decide whether an idea is worth building. | Pre-release |
 | **[shaper](https://github.com/ramboz/shaper)** | **Shape** | Turn intent into bounded releases. | Available |
 | **vellum** | **Design** | Carry visual intent into code with measurable fidelity. | Coming soon |
 | **[jig](https://github.com/ramboz/jig)** | **Build** | Turn specs into reviewed software. | Available |
@@ -15,18 +16,30 @@ Each tool owns a different part of the loop.
 | **gauge** | **Steer** | See progress, risk, blockers, and where attention is needed. | Coming soon |
 
 ```text
-SHAPE        DESIGN        BUILD         PROVE
-shaper       vellum        jig           servo
-   │            │           │              │
-   └────────────┴───────────┴──────────────┘
-                       │
-                     gauge
-                     STEER
+TRIAGE       SHAPE        DESIGN        BUILD         PROVE
+coaster      shaper       vellum        jig           servo
+   │            │            │           │              │
+   └────────────┴────────────┴───────────┴──────────────┘
+                             │
+                           gauge
+                           STEER
 ```
 
 This isn't a rigid pipeline. The tools compose where they are useful, and feedback flows between them.
 
 ## The tool wall
+
+### coaster — triage the idea
+
+> Is this idea worth building, and what would it be?
+
+Coaster covers the stretch before a project exists. It captures a hunch in your own words, scouts the field for who already does it, reads the evidence through six lenses, optionally pressure-tests it, and records your decision. Then it names the idea and hands it off to shaper and jig.
+
+It stays light: plain Markdown skills, nothing else to install or run. It hands research and challenge to richer skills when you have them installed. Challenge is opt-in and encouraging rather than adversarial, and every decision stays yours.
+
+Coaster is pre-release and Claude Code only for now.
+
+_Decide whether an idea is worth building._
 
 ### shaper — shape the work
 
@@ -41,7 +54,7 @@ _Shape intent into bounded releases._
 ### vellum — preserve design intent
 
 > What should the interface look like, exactly?  
-> (Coming soon to AI Pegboard.**)
+> (Coming soon to AI Pegboard.)
 
 Vellum covers the design side of the AI build loop. It carries an interface from brief and design through measurable redlines, implementation, and fidelity review.
 
@@ -86,7 +99,7 @@ _Evaluate outcomes against intent._
 ### gauge — know where to look
 
 > Across all this work, what needs attention?  
-> (Coming soon to AI Pegboard.**)
+> (Coming soon to AI Pegboard.)
 
 Gauge provides the higher-level view across projects and milestones. It surfaces progress, risk, blockers, cost, velocity, and the work that most needs human attention.
 
@@ -101,6 +114,7 @@ Pegboard isn't trying to turn the software lifecycle into one giant agent or one
 The tools deliberately operate at different levels:
 
 ```text
+Idea / opportunity           →  coaster
 Release / product intent     →  shaper
 Visual intent                →  vellum
 Change / implementation      →  jig
@@ -110,7 +124,7 @@ Project / portfolio          →  gauge
 
 Use the tools you need.
 
-A backend change might use Jig and Servo without Vellum. A UI feature might use Vellum, Jig, and Servo together. Shaper can sit above either when the work needs to be bounded into a release, while Gauge provides visibility across the work already underway.
+A backend change might use Jig and Servo without Vellum. A UI feature might use Vellum, Jig, and Servo together. Shaper can sit above either when the work needs to be bounded into a release, while Gauge provides visibility across the work already underway. Coaster comes first only when there is no project yet, just an idea to test.
 
 The common idea is simple:
 
@@ -127,11 +141,14 @@ Pegboard currently distributes:
 
 | Plugin | What it does | Claude Code | Codex | Copilot CLI |
 |---|---|:-:|:-:|:-:|
+| [coaster](https://github.com/ramboz/coaster) | A light-weight front door for new project ideas: capture a hunch, scout the field, read the evidence through six lenses, decide, name it and hand it off. | ✓ | — | — |
 | [jig](https://github.com/ramboz/jig) | Spec-driven, review-enforced, hook-gated AI-native development workflow: scaffold a project, split specs into slices, implement with TDD, review independently, reconcile, land. | ✓ | ✓ | ✓ |
 | [servo](https://github.com/ramboz/servo) | Closed-loop scaffolder for unattended agent operations: oracle scoring, headless agent loops, hooks, and worktree races — tailored to each project's signals. | ✓ | ✓ | ✓ |
 | [shaper](https://github.com/ramboz/shaper) | Release shaping before implementation starts: appetite, shaped bets, release cutlines, no-gos, and handoff guidance into specs. | ✓ | ✓ | ✓ |
 
-**vellum and gauge are coming soon.** Its place on the tool wall is shown here because it fills the design-to-code part of the lifecycle, but it is not yet wired into this marketplace.
+**coaster is pre-release.** Until its first tagged release, the marketplace installs it from its default branch; after that it is pinned like the others.
+
+**vellum and gauge are coming soon.** Their places on the tool wall are shown here because they fill the design-to-code and steering parts of the lifecycle, but they are not yet wired into this marketplace.
 
 ## Install
 
@@ -158,7 +175,7 @@ copilot plugin marketplace add ramboz/ai-pegboard
 copilot plugin install jig@ai-pegboard
 ```
 
-Swap `jig` for any plugin in the table below. A plugin only appears in a
+Swap `jig` for any plugin in the table above. A plugin only appears in a
 host's descriptor when its repository ships a committed package for that host,
 so `codex plugin list` / `copilot plugin marketplace browse ai-pegboard` show
 exactly what will install.
@@ -167,6 +184,6 @@ exactly what will install.
 
 The pegboard is meant to grow.
 
-Vellum and Gauge are the next tools planned for integration, bringing the design-to-code fidelity workflow and project portfolio monitoring into the same tool wall as Shaper, Jig, Servo.
+Vellum and Gauge are the next tools planned for integration, bringing the design-to-code fidelity workflow and project portfolio monitoring into the same tool wall as Coaster, Shaper, Jig, and Servo.
 
 Empty space on the board is intentional. There are more jobs in the AI-native software lifecycle worth building good tools for.

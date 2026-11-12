@@ -7,6 +7,25 @@
   },
   "plugins": [
     {
+      "name": "coaster",
+      "description": "A light-weight front door for new project ideas: capture a hunch, scout the field, read the evidence through six lenses, decide, name it and hand it off.",
+      "category": "Engineering",
+      "keywords": [
+        "idea-triage",
+        "field-research",
+        "discovery",
+        "naming",
+        "handoff"
+      ],
+      "homepage": "https://github.com/ramboz/coaster",
+      "repository": "https://github.com/ramboz/coaster",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ramboz/coaster.git",
+        "path": "hosts/claude"
+      }
+    },
+    {
       "name": "jig",
       "description": "Spec-driven, review-enforced, hook-gated AI-native development workflow: scaffold a project, split specs into slices, implement with TDD, review independently, reconcile, land.",
       "version": "2.16.2",

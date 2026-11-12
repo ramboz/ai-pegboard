@@ -97,3 +97,9 @@ Option D. Supporting decisions:
   hosts. Adding a host is one `hosts.<host>.path` line on the catalog entry;
   `bump_catalog.py` only re-pins hosts that are already declared, so a newly
   shipped host package still needs that line added by hand.
+- **2026-11-11** — coaster joins before its first release, with a Claude Code
+  package only (`hosts/claude`). Its entry carries no `version`, `ref` or `sha`
+  and leaves `pin` unset, so it tracks coaster's default branch for now;
+  `bump_catalog.py` skips a repo with no GitHub release and pins coaster on the
+  first run after one exists. Codex and Copilot lines get added when coaster
+  ships those packages.
