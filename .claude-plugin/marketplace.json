@@ -1,6 +1,6 @@
 {
   "name": "ai-pegboard",
-  "description": "ramboz's AI-native development workbench — jig, servo, shaper and friends — installable in Claude Code, Codex, and GitHub Copilot CLI from one marketplace.",
+  "description": "ramboz's AI-native development workbench — coaster, shaper, jig, servo and friends — installable in Claude Code, Codex, and GitHub Copilot CLI from one marketplace.",
   "owner": {
     "name": "ramboz",
     "url": "https://github.com/ramboz"
