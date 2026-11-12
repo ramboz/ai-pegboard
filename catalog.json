@@ -37,9 +37,9 @@
         "hooks",
         "scaffold"
       ],
-      "version": "2.16.2",
-      "ref": "v2.16.2",
-      "sha": "bccb6be1cf0f3b62c471869b7d9208928fa323c0",
+      "version": "2.17.1",
+      "ref": "v2.17.1",
+      "sha": "76aa587c7f27fb48c5b10adaea2ca85b92c53fcf",
       "hosts": {
         "claude": {
           "path": "hosts/claude"
@@ -63,9 +63,9 @@
         "agent-loop",
         "scaffold"
       ],
-      "version": "0.11.0",
-      "ref": "v0.11.0",
-      "sha": "067ef5092d3c3ebe7d55a4e27610d7fe1d688463",
+      "version": "0.12.0",
+      "ref": "v0.12.0",
+      "sha": "cca43b03c25b3f685f48a07f312d6d8165115843",
       "hosts": {
         "claude": {
           "path": "hosts/claude"
