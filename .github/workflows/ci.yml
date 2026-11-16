@@ -7,7 +7,9 @@ on:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    # Pinned: ubuntu-latest is now 26.04, which ships no Python 3.9 build (3.9
+    # is EOL). 24.04 is the newest image with the 3.9 floor — keep them in sync.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
