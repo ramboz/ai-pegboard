@@ -31,7 +31,7 @@
     {
       "name": "servo",
       "description": "Closed-loop scaffolder for unattended agent operations: oracle scoring, headless agent loops, hooks, and worktree races — tailored to each project's signals.",
-      "version": "0.12.0",
+      "version": "0.13.0",
       "category": "Engineering",
       "keywords": [
         "evaluation-driven-development",
@@ -44,8 +44,8 @@
         "source": "github",
         "repo": "ramboz/servo",
         "path": "hosts/copilot",
-        "ref": "v0.12.0",
-        "sha": "cca43b03c25b3f685f48a07f312d6d8165115843"
+        "ref": "v0.13.0",
+        "sha": "5ef94711a19f53f35a03cb1ea6ae680badf8a455"
       }
     },
     {
